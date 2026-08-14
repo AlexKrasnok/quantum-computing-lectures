@@ -9,6 +9,8 @@ authors:
 version: "2026.08"
 date-released: 2026-08-13
 license: CC-BY-4.0
+repository-code: "https://github.com/AlexKrasnok/quantum-computing-lectures"
+url: "https://github.com/AlexKrasnok/quantum-computing-lectures"
 abstract: >-
   A fourteen-notebook, engineering-oriented introduction to quantum computing,
   with current Qiskit 2.x examples, assignments, mathematical foundations,

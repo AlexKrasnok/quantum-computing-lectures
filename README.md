@@ -42,7 +42,12 @@ Install Qiskit as a complete package; do not install the retired standalone `qis
 
 ## Installation
 
-After publication, download the repository as a ZIP or clone it from [Alex Krasnok's GitHub profile](https://github.com/AlexKrasnok). Keep the directory structure intact so that notebook navigation and local figures work.
+Download the course as a ZIP from the [GitHub repository](https://github.com/AlexKrasnok/quantum-computing-lectures) or clone it directly. Keep the directory structure intact so that notebook navigation and local figures work.
+
+```bash
+git clone https://github.com/AlexKrasnok/quantum-computing-lectures.git
+cd quantum-computing-lectures
+```
 
 Windows PowerShell:
 
