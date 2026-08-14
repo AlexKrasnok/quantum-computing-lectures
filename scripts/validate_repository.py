@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import argparse
 import base64
 import hashlib
 import json
@@ -584,7 +585,12 @@ def embedded_image_payloads(notebooks: list[Path]) -> dict[tuple, bytes]:
     return payloads
 
 
-def validate_image_archive(notebooks: list[Path], errors: list[str]) -> None:
+def validate_image_archive(
+    notebooks: list[Path],
+    errors: list[str],
+    *,
+    allow_regenerated_images: bool = False,
+) -> None:
     manifest_path = ROOT / "assets" / "figures" / "manifest.json"
     if not manifest_path.exists():
         return
@@ -635,7 +641,9 @@ def validate_image_archive(notebooks: list[Path], errors: list[str]) -> None:
         embedded_bytes = embedded.get(key)
         if embedded_bytes is None:
             errors.append(f"{label}: source image is missing from its notebook cell")
-        elif hashlib.sha256(embedded_bytes).hexdigest() != record.get("sha256"):
+        elif (
+            record["kind"] != "generated-output" or not allow_regenerated_images
+        ) and hashlib.sha256(embedded_bytes).hexdigest() != record.get("sha256"):
             errors.append(f"{label}: notebook image differs from archived copy")
 
     missing_records = set(embedded) - manifest_keys
@@ -686,6 +694,16 @@ def validate_image_archive(notebooks: list[Path], errors: list[str]) -> None:
 
 
 def main() -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--allow-regenerated-images",
+        action="store_true",
+        help=(
+            "allow successfully regenerated code-cell images to differ from the "
+            "archived PNG bytes; attachment and archive hashes remain strict"
+        ),
+    )
+    args = parser.parse_args()
     errors: list[str] = []
     warnings: list[str] = []
 
@@ -742,7 +760,11 @@ def main() -> int:
         total_images += images
 
     validate_plain_files(errors)
-    validate_image_archive(notebooks, errors)
+    validate_image_archive(
+        notebooks,
+        errors,
+        allow_regenerated_images=args.allow_regenerated_images,
+    )
 
     for warning in warnings:
         print(f"WARNING: {warning}")

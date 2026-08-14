@@ -79,6 +79,14 @@ def execute_one(path: Path, timeout: int) -> None:
                     }
                 if output.get("output_type") in {"display_data", "execute_result"} and not data:
                     continue
+                if (
+                    output.get("output_type") == "stream"
+                    and cleaned_outputs
+                    and cleaned_outputs[-1].get("output_type") == "stream"
+                    and cleaned_outputs[-1].get("name") == output.get("name")
+                ):
+                    cleaned_outputs[-1]["text"] += output.get("text", "")
+                    continue
                 cleaned_outputs.append(output)
             cell.outputs = cleaned_outputs
     nbformat.validate(candidate)
