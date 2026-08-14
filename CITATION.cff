@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you teach, study, reuse, or adapt these course materials, please cite them using this metadata."
+title: "Quantum Computing Lectures: Foundations, Circuits, Algorithms, and Hardware"
+type: software
+authors:
+  - family-names: Krasnok
+    given-names: Aleksandr
+    email: akrasnok@fiu.edu
+version: "2026.08"
+date-released: 2026-08-13
+license: CC-BY-4.0
+abstract: >-
+  A fourteen-notebook, engineering-oriented introduction to quantum computing,
+  with current Qiskit 2.x examples, assignments, mathematical foundations,
+  quantum algorithms, and hardware architectures. The course supports
+  institutional teaching, independent study, examination review, and
+  preparation for quantum-technology roles. Educational materials are
+  licensed under CC BY 4.0; software and code are separately available under
+  the BSD 3-Clause License as described in LICENSE.
+keywords:
+  - quantum computing
+  - Qiskit
+  - quantum information
+  - Jupyter notebooks
+  - engineering education

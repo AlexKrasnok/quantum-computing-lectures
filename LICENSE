@@ -1,0 +1,79 @@
+Open-Use License for Quantum Computing Lectures
+
+Copyright (c) 2026 Aleksandr Krasnok
+
+This repository uses two complementary licenses so that educators, students,
+and independent learners can copy, teach, study, adapt, and redistribute the
+course while preserving attribution.
+
+1. Educational materials: Creative Commons Attribution 4.0 International
+
+Unless a file or figure states otherwise, the original lecture text,
+assignments, explanatory Markdown, course organization, original educational
+diagrams, and other non-code course materials are licensed under the Creative
+Commons Attribution 4.0 International license (CC BY 4.0).
+
+SPDX-License-Identifier: CC-BY-4.0
+License deed: https://creativecommons.org/licenses/by/4.0/
+Legal code: https://creativecommons.org/licenses/by/4.0/legalcode
+
+CC BY 4.0 permits sharing and adaptation for any purpose, including teaching
+at another institution, independent study, translation, and commercial use,
+provided that users give appropriate credit, link to the license, and indicate
+whether changes were made. Attribution must not imply endorsement by the
+author or Florida International University.
+
+Recommended attribution:
+
+  Based on "Quantum Computing Lectures: Foundations, Circuits, Algorithms,
+  and Hardware" by Aleksandr Krasnok, licensed under CC BY 4.0. Changes, if
+  any, are identified by the adapter.
+
+Use CITATION.cff for the complete scholarly citation metadata.
+
+2. Software and code: BSD 3-Clause License
+
+Python code cells, standalone scripts, and other source code in this
+repository are licensed under the BSD 3-Clause License.
+
+SPDX-License-Identifier: BSD-3-Clause
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+   this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+   may be used to endorse or promote products derived from this software
+   without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+3. Third-party material
+
+The licenses above apply only to material for which Aleksandr Krasnok owns the
+copyright or has authority to license. Third-party photographs, screenshots,
+article or book figures, quotations, logos, trademarks, and other identified
+external material remain subject to their original licenses and permissions.
+See FIGURE_SOURCES.md and the citation next to each item. A scholarly citation
+does not itself grant permission to redistribute a third-party image.
+
+If the status of an item is unclear, retain only a link to its source or
+replace it with an original or openly licensed alternative before public
+redistribution.
+
