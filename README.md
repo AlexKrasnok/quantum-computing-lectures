@@ -119,7 +119,7 @@ GitHub can generate a formatted citation from [CITATION.cff](CITATION.cff). Comp
 
 ## Figures and third-party material
 
-All 176 notebook images are stored twice: once inside their notebook attachment or output and once under `assets/figures/`. See the [Notebook Image Archive](IMAGE_MANIFEST.md) for the inventory, hashes, and restoration procedure. Code-generated plots and circuit diagrams can also be regenerated from their adjacent cells.
+All 174 notebook images are stored twice: once inside their notebook attachment or output and once under `assets/figures/`. See the [Notebook Image Archive](IMAGE_MANIFEST.md) for the inventory, hashes, and restoration procedure. Code-generated plots and circuit diagrams can also be regenerated from their adjacent cells.
 
 Every embedded figure has descriptive alternative text. Each generated plot or circuit is followed by a visible interpretation, and the execution script carries that description into the saved image-output metadata when notebooks are rerun.
 
