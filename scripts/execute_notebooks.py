@@ -16,6 +16,7 @@ from nbclient import NotebookClient
 
 ROOT = Path(__file__).resolve().parents[1]
 MACHINE_PATH = re.compile(r"[A-Za-z]:[\\/]+Users[\\/]+[^\\/\s]+[\\/]+")
+EPHEMERAL_REPR = re.compile(r"^<[^<>\n]+ at 0x[0-9A-Fa-f]+>$")
 
 
 def figure_descriptions(notebook) -> dict[str, str]:
@@ -60,13 +61,26 @@ def execute_one(path: Path, timeout: int) -> None:
         # Execution timestamps create noisy, machine-specific notebook diffs.
         cell.metadata.pop("execution", None)
         if cell.cell_type == "code":
+            cleaned_outputs = []
             for output in cell.get("outputs", []):
                 if output.get("output_type") == "stream":
                     output["text"] = MACHINE_PATH.sub("<user-path>/", output.get("text", ""))
-                if "image/png" in output.get("data", {}) and cell.get("id") in output_alt:
+                data = output.get("data", {})
+                plain_text = data.get("text/plain")
+                if isinstance(plain_text, (list, tuple)):
+                    plain_text = "".join(plain_text)
+                if isinstance(plain_text, str) and EPHEMERAL_REPR.fullmatch(
+                    plain_text.strip()
+                ):
+                    data.pop("text/plain", None)
+                if "image/png" in data and cell.get("id") in output_alt:
                     output["metadata"] = {
                         "image/png": {"alt": output_alt[cell.id]}
                     }
+                if output.get("output_type") in {"display_data", "execute_result"} and not data:
+                    continue
+                cleaned_outputs.append(output)
+            cell.outputs = cleaned_outputs
     nbformat.validate(candidate)
     nbformat.write(candidate, path)
 
