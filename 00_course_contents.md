@@ -2,23 +2,23 @@
 
 ## Quantum Computing: Foundations, Circuits, Algorithms, and Hardware
 
-The sequence is designed for engineering students with introductory Python and undergraduate linear algebra. The Python primer and early mathematics lectures provide a focused review of the required tools.
+The course is written for engineering students who have taken introductory Python and undergraduate linear algebra. The Python primer and the early mathematics lectures review the tools that the later lectures use.
 
-The complete course may be downloaded and adapted for teaching at universities, colleges, training programs, and other institutions. It also supports independent self-study, examination preparation, and preparation for quantum-software, applications, controls, photonics, and hardware roles. See the [Teaching and Self-Study Guide](TEACHING_AND_SELF_STUDY.md) for recommended pathways.
+Instructors at any institution, from universities to training programs, may download the complete course and adapt it for their own teaching. Learners can also use it for self-study, exam preparation, and preparation for jobs in quantum software, applications, controls, photonics, and hardware. The [Teaching and Self-Study Guide](TEACHING_AND_SELF_STUDY.md) describes the recommended pathways.
 
 ## Learning pathways
 
-- **Fourteen-week course:** follow Lectures 0–12 in order and finish with the supplementary systems-and-evidence lecture; use the Python primer before the course and the four sequential homework checkpoints.
-- **Compressed module:** begin with Lecture 0, emphasize Lectures 1–4 and 6–10, select the most relevant hardware material, and finish with selected supplementary sections.
-- **Self-study:** run every example, reproduce the main derivations, use each homework as a mastery checkpoint, and finish with the supplementary roadmap and verification problems.
-- **Exam review:** work from the learning outcomes, solve analytical problems without notes, then use Python for independent verification.
-- **Career preparation:** combine the software pathway through Lecture 10 with Lectures 11–12 and the supplementary material on roadmaps, AI-enabled workflows, verification, and professional evidence.
+- A fourteen-week course follows Lectures 0–12 in order and ends with the supplementary lecture on systems and evidence. Students work through the Python primer before the course starts and complete the four homework sets in sequence.
+- A compressed module starts with Lecture 0, concentrates on Lectures 1–4 and 6–10, adds the hardware material most relevant to the class, and ends with selected supplementary sections.
+- For self-study, run every example, reproduce the main derivations, and use each homework set to confirm that you have mastered the material before moving on. Finish with the roadmap and verification problems of the supplementary lecture.
+- For exam review, start from the learning outcomes, solve the analytical problems without notes, and then check the answers with Python.
+- For career preparation, combine the software pathway through Lecture 10 with Lectures 11–12 and the supplementary material on roadmaps, AI-enabled workflows, verification, and professional evidence.
 
 ### Course-level learning outcomes
 
 By the end of the course, a student should be able to:
 
-1. Explain why quantum engineering is useful for selected tasks while avoiding claims that state-space size alone proves a practical speedup.
+1. Explain why quantum engineering helps with selected tasks, and why the size of the state space alone does not prove a practical speedup.
 2. Represent quantum states and operators in finite-dimensional and function Hilbert spaces using bases, spectral decompositions, tensor products, and Dirac notation.
 3. Apply the postulates of quantum mechanics, including unitary evolution, projective measurement, density operators, partial trace, and composite-system structure.
 4. Analyze single- and multi-qubit gates, entanglement, circuit ordering, and measurement conventions.
@@ -39,10 +39,10 @@ By the end of the course, a student should be able to:
 | 3 | [Complex numbers, operators, and Dirac notation](lectures/03_complex_numbers_and_operators.ipynb) | Global and relative phase; interference; Hermitian and unitary operators; spectral projectors; operator exponentials; basis changes | Use spectral decompositions, generate unitaries from Hermitian operators, and translate between coordinates and basis-independent notation |
 | 4 | [Hilbert space and quantum mechanics I](lectures/04_hilbert_space_and_quantum_mechanics.ipynb) | Function Hilbert spaces; completeness and Parseval's identity; truncation; physical rays; qubit bases; projective measurement; composite systems | Expand states in orthonormal bases, quantify truncation error, compute Born probabilities, and distinguish basis changes from different measurements |
 | 5 | [Quantum dynamics and measurement](lectures/05_quantum_dynamics_and_measurement.ipynb) | Projective measurements; POVMs and instruments; expectation and variance; Robertson uncertainty; Hamiltonian evolution; shot statistics | Calculate outcome probabilities, conditional states, uncertainty bounds, driven-qubit rotations, and finite-shot errors |
-| 6 | [Density operators, decoherence, and entanglement](lectures/06_density_matrices_and_entanglement.ipynb) | Ensembles and reduced states; CPTP/Kraus channels; Lindblad dynamics; partial trace; Schmidt decomposition; entropy; CHSH and no-signalling | Test whether a density matrix is physical, model relaxation/dephasing, and quantify subsystem entanglement and correlations |
+| 6 | [Density operators, decoherence, and entanglement](lectures/06_density_matrices_and_entanglement.ipynb) | Ensembles and reduced states; CPTP/Kraus channels; Lindblad dynamics; partial trace; Schmidt decomposition; entropy; CHSH and no-signaling | Test whether a density matrix is physical, model relaxation/dephasing, and quantify subsystem entanglement and correlations |
 | 7 | [Bloch sphere and quantum gates](lectures/07_bloch_sphere_and_quantum_gates.ipynb) | Bloch vector/tomography; global and relative phase; SU(2); Euler decompositions; reversible embeddings; Clifford and universal gates | Reconstruct qubit states, derive gate action, distinguish local from entangling resources, and track bit-order conventions |
 | 8 | [Quantum circuits with current Qiskit](lectures/08_quantum_circuits_with_qiskit.ipynb) | Circuit/state/operator representations; bit order; V2 primitive PUBs/results; shots and noise; transpilation/ISA; dynamic circuits; Runtime cost | Build and audit Qiskit 2.x workflows, distinguish exact and sampled results, transpile to a target, and use optional hardware safely |
-| 9 | [Teleportation and Grover search](lectures/09_teleportation_and_grover.ipynb) | Teleportation identity, resources, no-signalling, fidelity, and feed-forward; Grover geometry; reversible phase oracles and implementation cost | Derive the correction table, assess teleportation evidence, implement dynamic control, and account for the full cost of a small Grover search |
+| 9 | [Teleportation and Grover search](lectures/09_teleportation_and_grover.ipynb) | Teleportation identity, resources, no-signaling, fidelity, and feed-forward; Grover geometry; reversible phase oracles and implementation cost | Derive the correction table, assess teleportation evidence, implement dynamic control, and account for the full cost of a small Grover search |
 | 10 | [Introductory quantum algorithms](lectures/10_quantum_algorithms.ipynb) | Complexity models; Grover scaling; Deutsch and Deutsch–Jozsa; phase kickback; QFT; phase estimation; Shor order finding | Identify promises and resource measures, connect QFT and phase estimation to order finding, and interpret algorithmic and cryptographic claims carefully |
 | 11 | [Quantum-computer architectures](lectures/11_quantum_computer_architectures.ipynb) | DiVincenzo criteria; benchmark hierarchy; fault tolerance; modular links; resource estimation; photonic encodings, components, loss, and feed-forward | Compare modalities with compatible metrics and turn photonic components, network links, and logical operations into explicit system-resource budgets |
 | 12 | [Superconducting qubits](lectures/12_superconducting_qubits.ipynb) | Transmon Hamiltonian and spectrum; microwave control and leakage; dispersive readout; decoherence; cryogenics; coupling; gates; logical error budgets | Relate circuit parameters and control Hamiltonians to gate, readout, and coherence tradeoffs, and evaluate system performance beyond headline qubit counts |

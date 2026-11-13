@@ -1,6 +1,6 @@
 # Teaching and Self-Study Guide
 
-This course is designed to be downloaded, reused, and adapted. Instructors may teach the complete sequence or select modules for an existing engineering, physics, computer-science, or quantum-technology course. Students and independent learners may use the same notebooks for structured self-study, examination review, and preparation for quantum-related academic or industry roles.
+Anyone may download this course and reuse or adapt it. Instructors may teach the complete sequence or take selected modules into an existing course in engineering, physics, computer science, or quantum technology. Students and independent learners may use the same notebooks for structured self-study, exam review, and preparation for academic or industry jobs in quantum technology.
 
 ## Getting the course
 
@@ -30,14 +30,14 @@ Activate the virtual environment using the command appropriate to your operating
 
 ## Guidance for instructors
 
-1. Start from [Course Contents](00_course_contents.md) and select the learning outcomes appropriate to the local program.
+1. Start from [Course Contents](00_course_contents.md) and choose the learning outcomes that fit your program.
 2. Make a course-specific copy or branch. Record substantial changes and retain the attribution and license notice.
-3. Run `python scripts/validate_repository.py` after editing notebooks, and execute the notebooks in the environment specified by `requirements.txt`. The validator also confirms that every embedded or generated picture still matches its redundant copy in `assets/figures/`.
-4. Distribute student copies of the homework notebooks. Problems marked **Python + handwritten** include dedicated cells for scanned work.
-5. Set local policies for collaboration, use of external code, grading, deadlines, and accessibility. Those institutional policies are not imposed by this repository.
+3. Run `python scripts/validate_repository.py` after editing notebooks, and execute the notebooks in the environment specified by `requirements.txt`. The validator also confirms that every embedded or generated picture still matches its backup copy in `assets/figures/`.
+4. Give students their own copies of the homework notebooks. Problems labeled *Python and handwritten* include cells for scanned handwritten work.
+5. Set your own policies for collaboration, use of external code, grading, deadlines, and accessibility. The repository does not prescribe them.
 6. Before redistributing retained third-party figures, review [Figure Sources and Permissions](FIGURE_SOURCES.md). Replace an image with a link or an original diagram when reuse rights are unclear.
 
-The [Notebook Image Archive](IMAGE_MANIFEST.md) provides a browsable backup and restoration map for every figure used by the notebooks. Keep both the notebooks and `assets/figures/` when copying the course.
+The [Notebook Image Archive](IMAGE_MANIFEST.md) lists the backup copy of every figure in the notebooks and explains how to restore a lost one. Keep both the notebooks and `assets/figures/` when you copy the course.
 
 Instructors may reorder topics, translate the materials, add institution-specific examples, remove hardware sections, or combine notebooks into a shorter module. Under CC BY 4.0, shared adaptations must credit the original author, link to the license, and identify modifications.
 
@@ -49,7 +49,7 @@ For each lecture:
 2. Predict the result of each code cell before running it.
 3. Change at least one parameter and explain the new result.
 4. Reproduce the central derivation without copying it.
-5. Complete the relevant homework problems and compare independent numerical and analytical checks.
+5. Solve the matching homework problems and check that the numerical and analytical answers agree.
 6. Keep a short list of errors, convention mistakes, and concepts that require review.
 
 The Python primer is the starting point for learners who need practice with complex arrays, conjugation, matrix products, tensor products, plotting, or Jupyter workflows.
@@ -58,13 +58,13 @@ The Python primer is the starting point for learners who need practice with comp
 
 Use the course learning outcomes as a checklist. Priority topics include complex inner products, tensor-product ordering, projectors and measurement, unitary evolution, reduced density matrices, entanglement, gate action, Qiskit bit order, teleportation, Grover geometry, QFT and phase estimation, noise channels, and hardware resource tradeoffs.
 
-Do not limit revision to rereading. Derive formulas on paper, solve a problem without a notebook, then use Python to test the answer. The mixed-format homework problems are designed for this workflow.
+Rereading the notes is not enough. Derive the formulas on paper, solve a problem without a notebook, and then test the answer with Python. The homework problems that combine Python with handwritten work are built for this routine.
 
 ## Preparing for quantum-technology roles
 
-Job preparation benefits from evidence that connects theory, code, and engineering judgment. A useful portfolio can include:
+For a job search, it helps to show work that connects theory, code, and engineering judgment. A useful portfolio can include:
 
-- a current-Qiskit circuit with exact and finite-shot results;
+- a circuit written for current Qiskit, with exact and finite-shot results;
 - a clear explanation of qubit and classical-bit ordering;
 - a noise-channel or open-system simulation;
 - a comparison between logical circuits and transpiled instructions;

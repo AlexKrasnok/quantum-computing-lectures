@@ -1,10 +1,10 @@
 # Quantum Computing Lectures
 
-This engineering course develops quantum computing from motivation and mathematical foundations through circuits, algorithms, noise, hardware, technology roadmaps, and verified AI-enabled workflows. The notebooks combine derivations, numerical examples, Qiskit circuits, assignments, experimental context, and references to primary literature.
+This engineering course starts from the motivation and mathematical foundations of quantum computing and continues through circuits, algorithms, noise, and hardware. The supplementary final lecture covers technology roadmaps and AI-enabled workflows whose results are verified before use. The notebooks combine derivations, numerical examples, Qiskit circuits, assignments, experimental context, and references to the primary literature.
 
-The repository is intentionally open for reuse. Instructors may download, adapt, translate, and teach the materials at their institutions. Students and independent learners may use them for self-study, examination review, and preparation for quantum-technology roles. Attribution and third-party exceptions are explained under [Reuse and attribution](#reuse-and-attribution).
+The materials are open for reuse. Instructors may download, adapt, translate, and teach them at their own institutions. Students and independent learners may use them for self-study, exam review, and preparation for jobs in quantum technology. The section [Reuse and attribution](#reuse-and-attribution) explains how to credit the course and which third-party items the open license does not cover.
 
-Begin with [Course Contents](00_course_contents.md) for the lecture order, prerequisites, learning outcomes, and homework map. The [Teaching and Self-Study Guide](TEACHING_AND_SELF_STUDY.md) provides complete-course, compressed-course, self-study, exam-preparation, and career-preparation pathways.
+Start with [Course Contents](00_course_contents.md), which gives the lecture order, prerequisites, learning outcomes, and the homework map. The [Teaching and Self-Study Guide](TEACHING_AND_SELF_STUDY.md) describes paths through the material for a complete course, a compressed course, self-study, exam preparation, and career preparation.
 
 ## Contents
 
@@ -13,7 +13,7 @@ Begin with [Course Contents](00_course_contents.md) for the lecture order, prere
 | `lectures/` | Fourteen notebooks: Lectures 0–12 and a final supplementary lecture |
 | `assignments/` | Four sequential homework sets aligned with Lectures 0–3, 4–5, 6–8, and 9–13 |
 | `appendices/python_primer.ipynb` | Python, NumPy, SymPy, Matplotlib, and quantum-array conventions |
-| `assets/figures/` | Redundant standalone copies of every embedded or generated notebook image |
+| `assets/figures/` | Standalone backup copies of every embedded or generated notebook image |
 | `IMAGE_MANIFEST.md` | Human-readable image inventory, recovery instructions, and archive summary |
 | `REFERENCES.md` | Course-wide books, papers, and software documentation |
 | `FIGURE_SOURCES.md` | Figure provenance and permissions |
@@ -23,11 +23,11 @@ Begin with [Course Contents](00_course_contents.md) for the lecture order, prere
 
 ## Intended users
 
-- **Instructors:** use the full sequence, select modules, translate notebooks, or integrate problems into an existing course.
-- **Enrolled students:** follow the local syllabus, execute examples, and submit the mixed Python and handwritten homework work requested by the instructor.
-- **Independent learners:** study the notebooks in order and use the assignments as checkpoints.
-- **Exam candidates:** review the learning outcomes, rederive formulas, and solve the analytical parts under time constraints before checking with Python.
-- **Job seekers and working engineers:** build evidence of current Qiskit, quantum-information, algorithm, noise, hardware-system, roadmap-analysis, and verification skills.
+- Instructors can teach the full sequence, select modules, translate notebooks, or add problems to an existing course.
+- Enrolled students follow the local syllabus, run the examples, and submit the Python and handwritten homework that the instructor assigns.
+- Independent learners can study the notebooks in order and use the assignments as checkpoints.
+- Exam candidates can review the learning outcomes, rederive the formulas, and solve the analytical parts under time limits before checking their answers with Python.
+- Job seekers and working engineers can build evidence of current skills in Qiskit, quantum information, algorithms, noise, hardware systems, roadmap analysis, and verification.
 
 ## Software environment
 
@@ -101,7 +101,7 @@ python scripts\execute_notebooks.py appendices\python_primer.ipynb
 
 ## Videos
 
-Course videos are ordinary YouTube watch links rather than notebook `iframe` elements. This makes them usable from Jupyter, GitHub, and exported HTML.
+Course videos are ordinary YouTube links instead of embedded `iframe` elements, so they open from Jupyter, from GitHub, and from exported HTML.
 
 ## Reuse and attribution
 
@@ -115,13 +115,13 @@ Suggested attribution:
 
 > Based on *Quantum Computing Lectures: Foundations, Circuits, Algorithms, and Hardware* by Aleksandr Krasnok, licensed under CC BY 4.0. Changes, if any, are identified by the adapter.
 
-GitHub can generate a formatted citation from [CITATION.cff](CITATION.cff). Complete legal terms and the code/content boundary are in [LICENSE](LICENSE).
+GitHub can generate a formatted citation from [CITATION.cff](CITATION.cff). The full legal terms, including which files count as code and which as course content, are in [LICENSE](LICENSE).
 
 ## Figures and third-party material
 
 All 174 notebook images are stored twice: once inside their notebook attachment or output and once under `assets/figures/`. See the [Notebook Image Archive](IMAGE_MANIFEST.md) for the inventory, hashes, and restoration procedure. Code-generated plots and circuit diagrams can also be regenerated from their adjacent cells.
 
-Every embedded figure has descriptive alternative text. Each generated plot or circuit is followed by a visible interpretation, and the execution script carries that description into the saved image-output metadata when notebooks are rerun.
+Every embedded figure has descriptive alternative text. Each generated plot or circuit is followed by a short written description, and the execution script copies that description into the metadata of the saved image when the notebooks are rerun.
 
 External photographs, screenshots, diagrams, and article figures remain subject to their source licenses. See [Figure Sources](FIGURE_SOURCES.md) before redistributing course images.
 
